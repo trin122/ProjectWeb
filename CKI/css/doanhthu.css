@@ -1,0 +1,136 @@
+#container_revenu {
+    width: 92%;
+    margin: 2% 0;
+    padding: 0 4%;
+}
+
+#title_revenu {
+    background-color: whitesmoke;
+    padding: .5% 0 .5% 1%;
+}
+
+#title_revenu a,
+#title_revenu i {
+    color: black;
+    margin-right: .5%;
+    text-decoration: none;
+    font-size: 3vh;
+}
+
+#content_revenu {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    /* Gộp các đường viền lân cận bên trong cái bảng lại với nhau */
+    border-collapse: collapse;
+}
+
+table thead tr th {
+    text-transform: capitalize;
+    padding: 1% 0;
+    background-color: rgb(215, 215, 215);
+}
+
+table td {
+    padding: 1.5% 0;
+    text-align: center;
+}
+
+/*Là pseudo-class để chọn các phần tử con của một phần tử dựa trên chỉ số của chúng. 
+even chọn các phần tử có chỉ số là số chẵn (2, 4, 6, ...). */
+table tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+#form_search_revenu {
+    display: flex;
+    justify-content: end;
+    padding: .5% 0;
+    height: 5%;
+}
+
+#form_search_revenu label {
+    font-size: 2.5vh;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#form_search_revenu label input {
+    height: 90%;
+    margin-left: 3%;
+    padding-inline-start: 5%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(177, 174, 174);
+}
+
+#form_search_revenu hr {
+    margin: 0 1%;
+    transform: rotate(7deg);
+}
+
+.pag {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.pag i {
+    font-size: 1.5vh;
+}
+
+.pag>button {
+    border: none;
+    padding: 0 .7%;
+    height: 4vh;
+    border-radius: 50%;
+    margin: 0 1px;
+    transition: 0.1s ease;
+}
+
+.change {
+    color: whitesmoke;
+    background-color: #5d8650 !important;
+}
+
+.container_chart {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    padding-bottom: 2%;
+}
+
+#chart_time,
+#chart_date,
+#chart_month,
+#barChart_product {
+    width: 50%;
+    height: 100%;
+}
+
+.pag>button:hover {
+    cursor: pointer;
+    background-color: rgb(210, 206, 206);
+}
+
+.pag>button:active {
+    transform: scale(0.9);
+}
+
+.container_input_totalAmount {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 .5% 0;
+}
+
+.container_input_totalAmount input {
+    outline: none;
+    width: 14.5%;
+    padding: .2% 0 .2% .5%;
+}

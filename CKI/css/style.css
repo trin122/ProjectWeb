@@ -1,0 +1,474 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+html {
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+#container_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+#container_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#container_introduce {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5%;
+    width: 100%;
+    height: 33vh;
+    box-shadow: 0px 1px 2px rgb(187, 187, 187);
+}
+
+#container_introduce>div {
+    width: 25%;
+    padding: 1%;
+}
+
+#container_introduce div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    height: 98%;
+    border: 1px solid whitesmoke;
+}
+
+#container_introduce div div p {
+    color: whitesmoke;
+    font-size: 4vh;
+}
+
+#container_introduce div div p:first-child {
+    margin-bottom: 5vh;
+    font-size: 7vh;
+}
+
+#container_introduce>div:first-child {
+    background-color: rgba(73, 186, 207, 0.85);
+}
+
+#container_introduce>div:nth-of-type(2) {
+    background-color: rgba(147, 100, 141, 0.85);
+}
+
+#container_introduce>div:last-child {
+    background-color: rgba(241, 103, 69, 0.85);
+}
+
+.container_newbook {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+    box-shadow: 0px 2px 5px rgb(187, 187, 187);
+}
+
+.container_newbook>div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3%;
+}
+
+.container_newbook>div:first-child h2,
+.container_newbook>div:first-child img,
+.container_newbook>div:first-child p {
+    margin: 2% 0;
+}
+
+.container_newbook div:first-child h2 {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.container_newbook>div:first-child p {
+    color: gray;
+    font-size: 2.3vh;
+}
+
+#books,
+#books_sph {
+    display: flex;
+    width: 95%;
+    flex-wrap: wrap;
+}
+
+.item_book {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    width: 16.8%;
+    height: 70vh;
+    margin: 0 .5%;
+    padding: 1.5% 1% 3% 1%;
+    overflow: hidden;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 2%;
+}
+
+.item_book div {
+    width: 100%;
+    text-align: center;
+}
+
+.item_book div p {
+    font-size: 2.6vh;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: 0.1s ease;
+}
+
+.name_book>p:last-child {
+    color: #c83548;
+    font-size: 2.3vh;
+    padding: 5% 0 3% 0;
+}
+
+.item_book div p:not(.price_book p):hover {
+    color: #f3652a;
+}
+
+.name_book {
+    height: 20%;
+}
+
+.name_book a {
+    text-decoration: none;
+    color: black;
+}
+
+.img_book {
+    height: 70%;
+}
+
+.img_book img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.add_book {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    margin: 3vh 0;
+    transition: 0.1s ease;
+}
+
+.add_book button {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 1% 6%;
+    color: #d7d7d7;
+    border: 2px solid #d7d7d7;
+    background-color: transparent;
+}
+
+.add_book button:hover {
+    cursor: pointer;
+    color: #f3652a;
+    border-color: #f3652a;
+}
+
+.container_btn_loadlistinweek,
+.container_btn_loadlistSPH {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container_btn_loadlistinweek .btn_more_iw,
+.container_btn_loadlistSPH .btn_more_sph {
+    cursor: pointer;
+    padding: 1.5% 5%;
+    font-weight: bold;
+    font-size: 2.5vh;
+    border: none;
+    color: whitesmoke;
+    background-color: #d80027;
+}
+
+.container_img_members_books {
+    width: 100%;
+    height: 13.5pc;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.container_img_members_books img {
+    width: 100%;
+    height: 100%;
+    object-position: 50% 0%;
+    object-fit: cover;
+    position: absolute;
+    filter: brightness(0.95);
+}
+
+.container_members_books {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.container_members,
+.container_quantity_books {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_members>div:first-child,
+.container_quantity_books>div:first-child {
+    padding: 4% 5%;
+    border-radius: 50%;
+}
+
+.container_members>div:first-child {
+    background-color: #93648d;
+}
+
+.container_quantity_books>div:first-child {
+    background-color: #4cc3d9;
+}
+
+.container_members>div:first-child i,
+.container_quantity_books>div:first-child i {
+    font-size: 1.7pc;
+    color: whitesmoke;
+}
+
+.container_members>div:last-child,
+.container_quantity_books>div:last-child {
+    margin-left: 7%;
+}
+
+.container_members>div:last-child div:first-child p,
+.container_quantity_books>div:last-child div:first-child p {
+    font-size: 4vh;
+    font-weight: 500;
+}
+
+.container_members>div:last-child div:first-child p {
+    color: #93648d;
+}
+
+.container_quantity_books>div:last-child div:first-child p {
+    color: #4cc3d9;
+}
+
+.container_members>div:last-child div:last-child p,
+.container_quantity_books>div:last-child div:last-child p {
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+.container_dtvc {
+    width: 100%;
+    height: 25pc;
+    margin-bottom: 15%;
+}
+
+.container_dtvc>div:first-child {
+    text-align: center;
+}
+
+.container_dtvc div h2 {
+    letter-spacing: .2em;
+    margin: 2% 0;
+    text-transform: uppercase;
+}
+
+.container_dtvc .intro_dtvc {
+    display: flex;
+    width: 100%;
+}
+
+.intro_dtvc>div {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3%;
+}
+
+.content_dtvc {
+    background-color: whitesmoke;
+    padding-bottom: 7%;
+}
+
+.content_dtvc p {
+    text-align: justify;
+    padding: 2%;
+    font-size: 16px;
+    color: #333;
+    min-height: 15pc;
+    line-height: 1.8em;
+}
+
+.intro_img_dtvc img {
+    width: 170px;
+    height: 170px;
+}
+
+.content_dtvc span {
+    color: #c83548;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container_maxim {
+    width: 100%;
+    height: 15pc;
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.container_maxim div {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_maxim div i,
+.container_maxim div h4,
+.container_maxim div p {
+    margin: 2% 0;
+    text-align: center;
+}
+
+.container_maxim div i {
+    font-size: 5vh;
+}
+
+.container_maxim div:first-child i {
+    color: #93648d;
+}
+
+.container_maxim div:nth-of-type(2) i {
+    color: #4cc3d9;
+}
+
+.container_maxim div:nth-of-type(3) i {
+    color: #7bc8a4;
+}
+
+.container_maxim div:last-child i {
+    color: #f16745;
+}
+
+.container_maxim div h4 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.container_maxim div p {
+    font-size: 2.8vh;
+    color: #333;
+}
+
+/* Anh NXB */
+.container_slide {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn_pages_iw,
+.btn_pages_sph {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: .3% .65%;
+    margin: 0 1px;
+}
+
+.changesta {
+    color: whitesmoke;
+    background-color: #5d8650 !important;
+}
+
+#container_find {
+    width: 92%;
+    margin: 2% 0;
+    padding: 0 4%;
+}
+
+#title_find {
+    background-color: whitesmoke;
+    padding: .5% 0 .5% 1%;
+}
+
+#title_find a,
+#title_find i {
+    color: black;
+    margin-right: .5%;
+    text-decoration: none;
+    font-size: 3vh;
+}
+
+#content_find {
+    width: 100%;
+}
+
+#container_result {
+    width: 100%;
+    padding-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dialog_button {
+    position: fixed;
+    z-index: 100;
+    bottom: 2.5%;
+    right: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+#dialog_button button {
+    cursor: pointer;
+    width: 2pc;
+    height: 2pc;
+    border: 0.5px solid gray;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    font-size: 1.1pc;
+    box-shadow: 0px 1px 3px 0px gray;
+    transition: .3s ease;
+}
+
+#dialog_button button:last-child {
+    margin-top: 15%;
+}
+
+#dialog_button button:hover {
+    transform: scale(1.1);
+}
+
+#dialog_button button:active {
+    transform: scale(0.5);
+}

@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+}
+
+html {
+    scrollbar-width: thin;
+}
+
+#container_pay {
+    width: 100%;
+    height: 120%;
+    display: flex;
+}
+
+#container_contain_info {
+    padding-top: 3%;
+    padding-left: 18%;
+    width: 50%;
+    min-height: 100%;
+    box-shadow: 0px 0px 10px -3px gray;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+i {
+    font-size: 2vh;
+}
+
+h3,
+h4 {
+    margin-bottom: 1%;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 1.7pc;
+}
+
+h4 {
+    margin-top: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.icon_name_logout {
+    display: flex;
+    align-items: center;
+}
+
+.icon_name_logout>div:first-child {
+    padding: 2% 2.2%;
+    border-radius: 7px;
+    background-color: rgb(221, 221, 221);
+    margin: 2% 2% 2% 1%;
+}
+
+.icon_name_logout>div:first-child i {
+    font-size: 4vh;
+    color: white;
+}
+
+.name_logout p {
+    color: rgb(134, 132, 132);
+    font-size: 2.5vh;
+}
+
+a {
+    font-size: 2.5vh;
+    color: #286f94;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type=text],
+form input[type=number],
+#city,
+#district,
+#ward {
+    width: 90%;
+    height: 2.5pc;
+    margin: 1% 0;
+    padding-left: 3%;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 7px;
+    outline: none;
+}
+
+.pthuc_thanhtoan {
+    width: 95%;
+    margin: 2% 0;
+}
+
+.pthuc_thanhtoan>p {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.pthuc_thanhtoan>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pthuc_thanhtoan>div label {
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.pthuc_thanhtoan>div span {
+    font-size: .9pc;
+    margin-left: 5%;
+}
+
+form>div:last-child {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0;
+}
+
+form>div:last-child button {
+    cursor: pointer;
+    padding: 3.5% 3%;
+    background-color: #286f94;
+    border: none;
+    color: white;
+    border-radius: 7px;
+}
+
+#container_contain_info>div:last-child {
+    width: 90%;
+    padding: 2.5% 0 0 0;
+    border-top: 1px solid rgb(212, 212, 212);
+    text-align: center;
+    font-size: 2vh;
+    color: gray;
+    margin-top: 11%;
+}
+
+#container_containt_product {
+    width: 50%;
+    background-color: white;
+}
+
+.item_img_pay {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+table {
+    border-spacing: 0px;
+    padding: 0 5%;
+}
+
+table tbody tr td {
+    padding: 1% 0;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+#container_containt_product>div:first-child {
+    width: 100%;
+    height: 60%;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+#show_money_pay {
+    width: 100%;
+}
+
+#show_money_pay>div {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 6%;
+    font-size: 3vh;
+}
+
+#show_money_pay>div:nth-of-type(2) {
+    padding-bottom: 2.5%;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+#show_money_pay>div p {
+    font-size: 2.8vh;
+}
+
+#dialog_thanhtoan {
+    position: fixed;
+    opacity: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.089);
+    transition: .25s ease;
+}
+
+.show {
+    opacity: 1 !important;
+    z-index: 10 !important;
+}
+
+#dialog_thanhtoan div {
+    width: 15%;
+    background-color: white;
+    border-radius: 7px;
+    padding: 2% 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-wrap: nowrap;
+}
+
+#dialog_thanhtoan div button {
+    cursor: pointer;
+    width: 50%;
+    padding: 3% 1%;
+    border-radius: 7px;
+    border: none;
+    margin: 3% 0 0 0;
+    background-color: #286f94;
+    color: white;
+    transition: .25s ease;
+}
+
+#dialog_thanhtoan div button:hover {
+    background-color: #165374;
+}

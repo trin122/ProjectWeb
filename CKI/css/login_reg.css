@@ -1,0 +1,220 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: whitesmoke;
+}
+
+.form_login_reg {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    position: relative;
+    box-shadow: 0px 1px 5px black;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.form_login_reg>div:not(div:first-child) {
+    height: 100%;
+    width: 50%;
+}
+
+.form_login_reg div:not(div:first-child) form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_login_reg div:not(div:first-child) form div {
+    width: 100%;
+    display: flex;
+}
+
+#context {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: 0.6s ease;
+}
+
+#context img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#context h4,
+#context h6 {
+    position: absolute;
+    color: whitesmoke;
+    top: 40%;
+    user-select: none;
+}
+
+#context h4 {
+    font-size: 4.5vh;
+}
+
+#context h6 {
+    font-size: 3.5vh;
+    top: 50%;
+}
+
+#form_login,
+#form_reg {
+    position: absolute;
+    background-color: white;
+    transform: translateY(0%);
+    transition: 0.5s ease;
+}
+
+#form_reg {
+    transform: translateY(100%);
+}
+
+#form_login.change_pos {
+    transform: translateY(-100%);
+}
+
+#form_reg.change_pos {
+    transform: translateY(0%);
+}
+
+#form_login div,
+#form_reg div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0 0 0;
+}
+
+#form_login form h5,
+#form_reg form h5 {
+    padding-bottom: 5px;
+    font-size: 4vh;
+}
+
+#form_login div>input,
+#form_reg div>input {
+    width: 80%;
+    height: 6.5vh;
+    padding-left: 5%;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid gray;
+    transition: .1s ease;
+}
+
+#form_login label,
+#form_reg label {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    left: 17%;
+    color: gray;
+    font-size: 2.3vh;
+    transition: .25s ease;
+}
+
+#form_login div>label.change,
+#form_reg div>label.change {
+    font-size: 2vh;
+    left: 15.5%;
+    transform: translateY(-18px);
+    background-color: white;
+    padding: 0 5px;
+    font-weight: bold;
+    color: #397228;
+}
+
+#form_login div>input.focus,
+#form_reg div>input.focus {
+    border: 2px solid #397228;
+}
+
+#form_login form button[type=submit],
+#form_reg form button[type=submit] {
+    width: 40%;
+    height: 6vh;
+    margin: 5% 0;
+    font-size: 2.5vh;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: .25s ease;
+}
+
+#form_login form button[type=submit]:hover,
+#form_reg form button[type=submit]:hover {
+    background-color: #397228;
+    color: white;
+}
+
+#form_login div:last-child span,
+#form_reg div:last-child span {
+    font-size: 2.3vh;
+    margin-right: .5%;
+}
+
+#form_login div:last-child a,
+#form_reg div:last-child a {
+    font-size: 2.3vh;
+    cursor: pointer;
+}
+
+#form_login div:last-child a:hover,
+#form_reg div:last-child a:hover {
+    color: rgb(163, 6, 6);
+}
+
+.hidden_show_pass_login button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: 0.1s ease;
+}
+
+
+.hidden_show_pass_login button:active {
+    transform: scale(0.8);
+}
+
+.hidden_show_pass_login {
+    position: absolute;
+    right: 9vh;
+}
+
+.btn_showhidden_login,
+.btn_showhidden_reg,
+.btn_showhidden_again_reg {
+    display: none;
+}
+
+#form_login>div:first-child {
+    margin: 0;
+}
+
+#tbao_login,
+#tbao_reg {
+    font-size: 2.3vh;
+    color: red;
+    width: 80%;
+    margin-bottom: 1%;
+}
